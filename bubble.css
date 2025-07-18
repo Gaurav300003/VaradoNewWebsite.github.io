@@ -1,0 +1,149 @@
+/* Water droplet animation */
+@keyframes dropletFall {
+    0% {
+        transform: translateY(-100px) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.water-droplet {
+    position: fixed;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 159, 227, 0.4);  /* Updated to match your brand color */
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: dropletFall 2s linear infinite;
+    z-index: -1;
+}
+
+/* Create multiple droplets with different positions/delays */
+.water-droplet:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 2s;
+}
+.water-droplet:nth-child(2) {
+    left: 25%;
+    animation-delay: 0.3s;
+    animation-duration: 2.2s;
+}
+.water-droplet:nth-child(3) {
+    left: 40%;
+    animation-delay: 0.6s;
+    animation-duration: 1.8s;
+}
+.water-droplet:nth-child(4) {
+    left: 55%;
+    animation-delay: 0.9s;
+    animation-duration: 2.1s;
+}
+.water-droplet:nth-child(5) {
+    left: 70%;
+    animation-delay: 1.2s;
+    animation-duration: 2.3s;
+}
+.water-droplet:nth-child(6) {
+    left: 85%;
+    animation-delay: 1.5s;
+    animation-duration: 1.9s;
+}
+
+/* Bubble animation */
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
+}
+
+.bubble-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.bubble {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 159, 227, 0.25);  /* Updated to match your brand color */
+    border-radius: 50%;
+    animation: bubbleRise 25s ease-in infinite;
+    z-index: -1;
+}
+
+/* Create multiple bubbles with different sizes/positions */
+.bubble:nth-child(1) {
+    left: 15%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+.bubble:nth-child(2) {
+    left: 40%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 1s;
+    animation-duration: 20s;
+}
+.bubble:nth-child(3) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 17s;
+}
+.bubble:nth-child(4) {
+    left: 30%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 3s;
+    animation-duration: 22s;
+}
+.bubble:nth-child(5) {
+    left: 75%;
+    width: 18px;
+    height: 18px;
+    animation-delay: 4s;
+    animation-duration: 16s;
+}
+.bubble:nth-child(6) {
+    left: 85%;
+    width: 22px;
+    height: 22px;
+    animation-delay: 5s;
+    animation-duration: 19s;
+}
+.bubble:nth-child(7) {
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    animation-delay: 6s;
+    animation-duration: 21s;
+} 
